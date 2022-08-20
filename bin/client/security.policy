@@ -1,0 +1,10 @@
+grant {
+    permission java.security.AllPermission "*","*";
+    permission java.net.SocketPermission "*",
+        "connect,accept,resolve";
+    permission java.net.SocketPermission "*:80", "connect";
+    permission java.io.FilePermission "<<ALL FILES>>", "read,write";
+    permission java.util.PropertyPermission "*","read";
+    permission javax.sound.sampled.AudioPermission "*","record";
+    permission java.awt.AWTPermission  "*","*";
+};

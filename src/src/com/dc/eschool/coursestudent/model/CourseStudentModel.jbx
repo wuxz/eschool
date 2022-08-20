@@ -1,0 +1,16 @@
+[PropertyInfo]
+courseStudentID,Integer,false,false,CourseStudentID,CourseStudentID,true,<default>
+student,Integer,false,false,Student,Student,true,<default>
+courseID,Integer,false,false,CourseID,CourseID,true,<default>
+allow,String,false,false,Allow,Allow,true,<default>
+createDate,String,false,false,CreateDate,CreateDate,true,<default>
+createTime,String,false,false,CreateTime,CreateTime,true,<default>
+createBy,Integer,false,false,CreateBy,CreateBy,true,<default>
+lastModifyDate,String,false,false,LastModifyDate,LastModifyDate,true,<default>
+lastModifyTime,String,false,false,LastModifyTime,LastModifyTime,true,<default>
+lastModifyBy,Integer,false,false,LastModifyBy,LastModifyBy,true,<default>
+[IconNames]
+
+
+
+

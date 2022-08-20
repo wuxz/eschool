@@ -1,0 +1,127 @@
+
+TD
+{
+    FONT-FAMILY: "Arial","Verdana","Helvetica", "sans-serif";
+	COLOR: #003366;
+    FONT-SIZE: 9pt;
+
+}
+H1
+{
+	FONT-FAMILY: "Arial","Verdana","Helvetica", "sans-serif";
+	COLOR: #003366;
+    FONT-SIZE: 18pt;
+}
+
+H2
+{
+	FONT-FAMILY: "Arial","Verdana","Helvetica", "sans-serif";
+	COLOR: #003366;
+    FONT-SIZE: 16pt;
+}
+
+H3
+{
+	FONT-FAMILY: "Arial","Verdana","Helvetica", "sans-serif";
+	COLOR: #003366;
+    FONT-SIZE: 14pt;
+}
+
+H4
+{
+	FONT-FAMILY: "Arial","Verdana","Helvetica", "sans-serif";
+	COLOR: #003366;
+    FONT-SIZE: 12pt;
+}
+
+H5
+{
+	FONT-FAMILY: "Arial","Verdana","Helvetica", "sans-serif";
+	COLOR: #003366;
+    FONT-SIZE: 9pt;
+}
+
+H6
+{
+	FONT-FAMILY: "Arial","Verdana","Helvetica", "sans-serif";
+	COLOR: #003366;
+    FONT-SIZE: 8pt;
+}
+
+.Title
+{
+	FONT-FAMILY: "Arial","Verdana","Helvetica", "sans-serif";
+	COLOR: #003366;
+    FONT-SIZE: 13pt;
+}
+
+
+SELECT{
+    BORDER-BOTTOM: 1px solid;
+    BORDER-LEFT: 1px solid;
+    BORDER-RIGHT: 1px solid;
+    BORDER-TOP: 1px solid;
+	boder-color: black;
+    FONT-WEIGHT: normal
+     font-family: ËÎÌו;
+	font-size : 12px;
+	COLOR: #1a237a
+
+}
+.fontcopy
+{
+    COLOR: #99ccff;
+    FONT-FAMILY: "Arial", "Helvetica", "sans-serif";
+    FONT-SIZE: 9pt;
+    LETTER-SPACING: 2px;
+    WORD-SPACING: 2px
+}
+
+A
+{
+	FONT-FAMILY: "Arial","Verdana","Helvetica", "sans-serif";
+	COLOR: #003366 ;
+    FONT-SIZE: 9pt;
+}
+
+A:hover
+{
+	FONT-FAMILY: "Arial","Verdana","Helvetica", "sans-serif";
+	COLOR: #003366 ;
+    FONT-SIZE: 9pt;
+}
+
+A:link
+{
+	FONT-FAMILY: "Arial","Verdana","Helvetica", "sans-serif";
+	COLOR: #699ACC  ;
+    FONT-SIZE: 9pt;
+}
+
+A.fontnavi
+{
+    COLOR: white;
+    FONT-SIZE: 9pt;
+    FONT-WEIGHT: 300;
+    LETTER-SPACING: 2px;
+    TEXT-DECORATION: none;
+    WORD-SPACING: 2px
+}
+A.fontnavi:hover
+{
+    COLOR: #ffe3ad;
+    FONT-SIZE: 9pt;
+    FONT-WEIGHT: 300;
+    LETTER-SPACING: 2px;
+    TEXT-DECORATION: none;
+    WORD-SPACING: 2px
+}
+
+
+
+==========================================
+.leftmenu
+{
+	color:#336799;
+	font-size:12px;
+}

@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<screen-definitions>
+
+  <template>/template.jsp</template>
+
+  <screen>
+    <screen-name>MAIN</screen-name>
+    <parameter key="HtmlTitle" value="ESchool HomePage" direct="true"/>
+    <parameter key="HtmlBody" value="/eschool_login.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>TEACHER</screen-name>
+    <parameter key="HtmlTitle" value="Teacher HomePage" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/t_banner.jsp" direct="false"/>
+    <parameter key="HtmlNavigator" value="/common/t_navigator.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/teacher/t_home.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>STUDENT</screen-name>
+    <parameter key="HtmlTitle" value="Student HomePage" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/s_banner.jsp" direct="false"/>
+    <parameter key="HtmlNavigator" value="/common/s_navigator.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/student/s_home.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>ADMIN</screen-name>
+    <parameter key="HtmlTitle" value="Admin HomePage" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/a_banner.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/admin/admin_home.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>ADMININFO</screen-name>
+    <parameter key="HtmlTitle" value="Admin HomePage" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/a_banner.jsp" direct="false"/>
+    <parameter key="HtmlScript" value="/javascript/admin_info.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/admin/user/admin_info.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>TEACHERINFO</screen-name>
+    <parameter key="HtmlTitle" value="Admin HomePage" direct="true"/>
+    <parameter key="HtmlScript" value="/javascript/teacher_info.jsp" direct="false"/>
+    <parameter key="HtmlBanner" value="/common/t_banner.jsp" direct="false"/>
+    <parameter key="HtmlNavigator" value="/common/t_navigator.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/share/teacher_info.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>STUDENTINFO</screen-name>
+    <parameter key="HtmlTitle" value="Admin HomePage" direct="true"/>
+    <parameter key="HtmlScript" value="/javascript/student_info.jsp" direct="false"/>
+    <parameter key="HtmlBanner" value="/common/s_banner.jsp" direct="false"/>
+    <parameter key="HtmlNavigator" value="/common/s_navigator.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/share/student_info.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>ERROR</screen-name>
+    <parameter key="HtmlTitle" value="Error" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/banner.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/errorpage.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>MISSING_FORM_DATA</screen-name>
+    <parameter key="HtmlTitle" value="Missing Form Data" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/banner.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/common/missingformdata.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>SIGN_IN</screen-name>
+    <parameter key="HtmlTitle" value="Sign In" direct="true"/>
+    <parameter key="HtmlBody" value="/eschool_login.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>SIGN_IN_ERROR</screen-name>
+    <parameter key="HtmlTitle" value="Sign In" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/banner.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/common/error.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>SIGN_OUT</screen-name>
+    <parameter key="HtmlTitle" value="Sign Off" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/banner.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/common/signoff.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>USERS</screen-name>
+    <parameter key="HtmlTitle" value="User List" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/a_banner.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/admin/user/user_list.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>USER_MANAGER</screen-name>
+    <parameter key="HtmlTitle" value="User Manager" direct="true"/>
+    <parameter key="HtmlScript" value="/javascript/user_manage.jsp" direct="false"/>
+    <parameter key="HtmlBanner" value="/common/a_banner.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/admin/user/user_manage.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>ECLASS</screen-name>
+    <parameter key="HtmlTitle" value="List of Class" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/a_banner.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/admin/eclass/eclass_list.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>ECLASS_MANAGER</screen-name>
+    <parameter key="HtmlTitle" value="Manage the class" direct="true"/>
+    <parameter key="HtmlScript" value="/javascript/eclass_manage.jsp" direct="false"/>
+    <parameter key="HtmlBanner" value="/common/a_banner.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/admin/eclass/eclass_manage.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>SUBJECT</screen-name>
+    <parameter key="HtmlTitle" value="List of Subject" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/a_banner.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/admin/subject/subject_list.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>SUBJECT_MANAGER</screen-name>
+    <parameter key="HtmlTitle" value="Manage the subject" direct="true"/>
+    <parameter key="HtmlScript" value="/javascript/subject_manage.jsp" direct="false"/>
+    <parameter key="HtmlBanner" value="/common/a_banner.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/admin/subject/subject_manage.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>COURSE</screen-name>
+    <parameter key="HtmlTitle" value="Course List" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/a_banner.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/admin/course/course_list.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>COURSE_STUDENT</screen-name>
+    <parameter key="HtmlTitle" value="Course and Student" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/a_banner.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/admin/course/select_student.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>T_COURSE_INFO</screen-name>
+    <parameter key="HtmlTitle" value="Course List" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/t_banner.jsp" direct="false"/>
+    <parameter key="HtmlNavigator" value="/common/t_navigator.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/share/t_course_info.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>S_COURSE_INFO</screen-name>
+    <parameter key="HtmlTitle" value="Course List" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/t_banner.jsp" direct="false"/>
+    <parameter key="HtmlNavigator" value="/common/s_navigator.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/share/s_course_info.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>COURSE_MANAGER</screen-name>
+    <parameter key="HtmlTitle" value="Manage Course" direct="true"/>
+    <parameter key="HtmlScript" value="/javascript/course_manage.jsp" direct="false"/>
+    <parameter key="HtmlBanner" value="/common/a_banner.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/admin/course/course_manage.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>CHATROOM</screen-name>
+    <parameter key="HtmlTitle" value="Chat room" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/banner.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/chatroom/netchat.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>TEST_MANAGER</screen-name>
+    <parameter key="HtmlTitle" value="Test Manager" direct="true"/>
+    <parameter key="HtmlScript" value="/javascript/project_add.jsp" direct="false"/>
+    <parameter key="HtmlBanner" value="/common/t_banner.jsp" direct="false"/>
+    <parameter key="HtmlNavigator" value="/common/t_navigator.jsp" direct="false"/>
+    <parameter key="HtmlTopTitle" value="/teacher/test/common/t_test_title.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/teacher/test/t_test_detail.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>OTHER_MANAGER</screen-name>
+    <parameter key="HtmlTitle" value="Project Manager" direct="true"/>
+    <parameter key="HtmlScript" value="/javascript/project_add.jsp" direct="false"/>
+    <parameter key="HtmlBanner" value="/common/t_banner.jsp" direct="false"/>
+    <parameter key="HtmlNavigator" value="/common/t_navigator.jsp" direct="false"/>
+    <parameter key="HtmlTopTitle" value="/teacher/others/common/t_others_title.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/teacher/others/other_item_detail.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>PROJECT_LIST</screen-name>
+    <parameter key="HtmlTitle" value="Project List" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/t_banner.jsp" direct="false"/>
+    <parameter key="HtmlNavigator" value="/common/t_navigator.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/teacher/t_item_list.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>PROJECT_REDIRECT</screen-name>
+    <parameter key="HtmlTitle" value="project" direct="true"/>
+    <parameter key="HtmlBody" value="/teacher/test/test_redirect.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>TEST_LIST</screen-name>
+    <parameter key="HtmlTitle" value="Test List" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/t_banner.jsp" direct="false"/>
+    <parameter key="HtmlNavigator" value="/common/t_navigator.jsp" direct="false"/>
+    <parameter key="HtmlTopTitle" value="/teacher/test/common/t_test_title.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/teacher/test/question_list.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>TEST_ANALYSE</screen-name>
+    <parameter key="HtmlTitle" value="Test Analyse" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/t_banner.jsp" direct="false"/>
+    <parameter key="HtmlNavigator" value="/common/t_navigator.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/teacher/test/analyse_test.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>TEST_ANALYSE_PRINT</screen-name>
+    <parameter key="HtmlBody" value="/teacher/test/analyse_test_print.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>CONTENT_MANAGER</screen-name>
+    <parameter key="HtmlTitle" value="Test List" direct="true"/>
+    <parameter key="HtmlScript" value="/javascript/data_upload.jsp" direct="false"/>
+    <parameter key="HtmlBanner" value="/common/t_banner.jsp" direct="false"/>
+    <parameter key="HtmlNavigator" value="/common/t_navigator.jsp" direct="false"/>
+    <parameter key="HtmlTopTitle" value="/teacher/test/common/t_test_title.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/teacher/common/data_upload.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>OTHER_UPLOAD</screen-name>
+    <parameter key="HtmlTitle" value="Test List" direct="true"/>
+    <parameter key="HtmlScript" value="/javascript/data_upload.jsp" direct="false"/>
+    <parameter key="HtmlBanner" value="/common/t_banner.jsp" direct="false"/>
+    <parameter key="HtmlNavigator" value="/common/t_navigator.jsp" direct="false"/>
+    <parameter key="HtmlTopTitle" value="/teacher/others/common/t_others_title.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/teacher/common/data_upload.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>OTHER_LIST</screen-name>
+    <parameter key="HtmlTitle" value="Test List" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/t_banner.jsp" direct="false"/>
+    <parameter key="HtmlNavigator" value="/common/t_navigator.jsp" direct="false"/>
+    <parameter key="HtmlTopTitle" value="/teacher/others/common/t_others_title.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/teacher/others/other_item_list.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>SELECT_OTHER</screen-name>
+    <parameter key="HtmlTitle" value="Test List" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/t_banner.jsp" direct="false"/>
+    <parameter key="HtmlNavigator" value="/common/t_navigator.jsp" direct="false"/>
+    <parameter key="HtmlTopTitle" value="/teacher/others/common/t_others_title.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/teacher/common/select_data.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>TEST_STUDENT</screen-name>
+    <parameter key="HtmlTitle" value="Show Project" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/s_banner.jsp" direct="false"/>
+    <parameter key="HtmlNavigator" value="/common/s_navigator.jsp" direct="false"/>
+    <parameter key="HtmlTopTitle" value="/student/test/common/s_test_title.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/student/test/s_test_detail.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>PROJECT_LIST_STUDENT</screen-name>
+    <parameter key="HtmlTitle" value="Project List" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/s_banner.jsp" direct="false"/>
+    <parameter key="HtmlNavigator" value="/common/s_navigator.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/student/s_item_list.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>OTHER_STUDENT</screen-name>
+    <parameter key="HtmlTitle" value="Project List" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/s_banner.jsp" direct="false"/>
+    <parameter key="HtmlNavigator" value="/common/s_navigator.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/student/others/s_other_detail.jsp" direct="false"/>
+    <parameter key="HtmlTopTitle" value="/student/others/common/s_others_title.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>OTHER_LIST_STUDENT</screen-name>
+    <parameter key="HtmlTitle" value="Project List" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/s_banner.jsp" direct="false"/>
+    <parameter key="HtmlNavigator" value="/common/s_navigator.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/student/others/s_other_list.jsp" direct="false"/>
+    <parameter key="HtmlTopTitle" value="/student/others/common/s_others_title.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>HOMEWORK_DETAIL</screen-name>
+    <parameter key="HtmlTitle" value="Homework" direct="true"/>
+    <parameter key="HtmlNavigator" value="/common/s_navigator.jsp" direct="false"/>
+    <parameter key="HtmlBanner" value="/common/s_banner.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/student/homework/assignment_detail.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+    <parameter key="HtmlTopTitle" value="/student/homework/common/s_assignment_title.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>HOMEWORK_LIST_STUDENT</screen-name>
+    <parameter key="HtmlTitle" value="Homework" direct="true"/>
+    <parameter key="HtmlNavigator" value="/common/s_navigator.jsp" direct="false"/>
+    <parameter key="HtmlBanner" value="/common/s_banner.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/student/homework/assignment_list.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+    <parameter key="HtmlTopTitle" value="/student/homework/common/s_assignment_title.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>ANSWERITEM</screen-name>
+    <parameter key="HtmlTitle" value="Answer key" direct="true"/>
+    <parameter key="HtmlScript" value="/javascript/answer_sheet.jsp" direct="false"/>
+    <parameter key="HtmlBanner" value="/common/t_banner.jsp" direct="false"/>
+    <parameter key="HtmlNavigator" value="/common/t_navigator.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/teacher/test/answer_sheet.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>HOMEWORK_UPLOAD_STUDENT</screen-name>
+    <parameter key="HtmlTitle" value="Upload Homework" direct="true"/>
+    <parameter key="HtmlScript" value="/javascript/upload_homework.jsp" direct="false"/>
+    <parameter key="HtmlBanner" value="/common/s_banner.jsp" direct="false"/>
+    <parameter key="HtmlNavigator" value="/common/s_navigator.jsp" direct="false"/>
+    <parameter key="HtmlTopTitle" value="/student/homework/common/s_assignment_title.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/student/homework/upload_assignment.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>APPROVED_UPLOAD</screen-name>
+    <parameter key="HtmlTitle" value="Upload the approved homework" direct="true"/>
+    <parameter key="HtmlScript" value="/javascript/upload_homework.jsp" direct="false"/>
+    <parameter key="HtmlBanner" value="/common/t_banner.jsp" direct="false"/>
+    <parameter key="HtmlNavigator" value="/common/t_navigator.jsp" direct="false"/>
+    <parameter key="HtmlTopTitle" value="/teacher/others/common/t_assignment_title.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/teacher/others/upload_approved.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>APPROVE_HOMEWORK</screen-name>
+    <parameter key="HtmlTitle" value="List of hand in homework" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/t_banner.jsp" direct="false"/>
+    <parameter key="HtmlNavigator" value="/common/t_navigator.jsp" direct="false"/>
+    <parameter key="HtmlTopTitle" value="/teacher/others/common/t_assignment_title.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/teacher/others/approve_assignment.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>UPLOADED_HOMEWORK</screen-name>
+    <parameter key="HtmlTitle" value="Uploaded Homework" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/s_banner.jsp" direct="false"/>
+    <parameter key="HtmlNavigator" value="/common/s_navigator.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/student/homework/uploadedassignment_list.jsp" direct="false"/>
+    <parameter key="HtmlTopTitle" value="/student/homework/common/s_assignment_title.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>SELECT_PROJECT</screen-name>
+    <parameter key="HtmlTitle" value="Test List" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/t_banner.jsp" direct="false"/>
+    <parameter key="HtmlNavigator" value="/common/t_navigator.jsp" direct="false"/>
+    <parameter key="HtmlTopTitle" value="/teacher/test/common/t_test_title.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/teacher/common/select_data.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>S_TEACHER_RESOURCE</screen-name>
+    <parameter key="HtmlTitle" value="Fetching teacher resource" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/s_banner.jsp" direct="false"/>
+    <parameter key="HtmlNavigator" value="/common/s_navigator.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/share/teacher_resource.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>T_TEACHER_RESOURCE</screen-name>
+    <parameter key="HtmlTitle" value="Fetching teacher resource" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/t_banner.jsp" direct="false"/>
+    <parameter key="HtmlNavigator" value="/common/t_navigator.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/share/teacher_resource.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>A_TEACHER_RESOURCE</screen-name>
+    <parameter key="HtmlTitle" value="Fetching teacher resource" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/a_banner.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/share/teacher_resource.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>UNHANDIN_STUDENT</screen-name>
+    <parameter key="HtmlTitle" value="List of hand in homework" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/t_banner.jsp" direct="false"/>
+    <parameter key="HtmlNavigator" value="/common/t_navigator.jsp" direct="false"/>
+    <parameter key="HtmlTopTitle" value="/teacher/others/common/t_assignment_title.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/teacher/others/not_deliver.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>LOOKUPSCHOOLRESOURCE_ADMIN</screen-name>
+    <parameter key="HtmlTitle" value="schoolresource" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/a_banner.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/share/lookup_data.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+    <parameter key="HtmlNavigator" value="/common/a_navigator.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>LOOKUPSCHOOLRESOURCE_TEACHER</screen-name>
+    <parameter key="HtmlTitle" value="schoolresource" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/t_banner.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/share/lookup_data.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+    <parameter key="HtmlNavigator" value="/common/t_navigator.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>LOOKUPSCHOOLRESOURCE_STUDENT</screen-name>
+    <parameter key="HtmlTitle" value="schoolresource" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/s_banner.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/share/lookup_data.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+    <parameter key="HtmlNavigator" value="/common/s_navigator.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>SCHOOLRESOURCEMANAGER</screen-name>
+    <parameter key="HtmlTitle" value="School resource" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/a_banner.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/admin/data/data_manage.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+    <parameter key="HtmlNavigator" value="/common/a_navigator.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>JUDGEPAPER</screen-name>
+    <parameter key="HtmlNavigator" value="/common/t_navigator.jsp" direct="false"/>
+    <parameter key="HtmlTitle" value="Judge paper" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/t_banner.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/teacher/test/judge_paper.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+    <parameter key="HtmlTopTitle" value="/teacher/test/common/t_test_title.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>SCHOOLRESOURCE_UPDATED</screen-name>
+    <parameter key="HtmlTitle" value="SchoolResource" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/a_banner.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/admin/data/data_manage.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+    <parameter key="HtmlNavigator" value="/common/a_navigator.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>TESTRESULTITEM</screen-name>
+    <parameter key="HtmlTitle" value="Test Result" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/t_banner.jsp" direct="false"/>
+    <parameter key="HtmlNavigator" value="/common/t_navigator.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/teacher/test/judge_paper.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+    <parameter key="HtmlTopTitle" value="/teacher/test/common/t_test_title.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>LOOKUPGRADE_TEACHER</screen-name>
+    <parameter key="HtmlTitle" value="Project List" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/t_banner.jsp" direct="false"/>
+    <parameter key="HtmlNavigator" value="/common/t_navigator.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/teacher/t_lookup_grade.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>LOOKUPGRADE_STUDENT</screen-name>
+    <parameter key="HtmlTitle" value="Project List" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/s_banner.jsp" direct="false"/>
+    <parameter key="HtmlNavigator" value="/common/s_navigator.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/student/s_lookup_grade.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+  <screen>
+    <screen-name>SCHOOLDATALIST</screen-name>
+    <parameter key="HtmlTitle" value="School Resource List" direct="true"/>
+    <parameter key="HtmlBanner" value="/common/a_banner.jsp" direct="false"/>
+    <parameter key="HtmlNavigator" value="/common/a_navigator.jsp" direct="false"/>
+    <parameter key="HtmlBody" value="/admin/data/school_data_list.jsp" direct="false"/>
+    <parameter key="HtmlFooter" value="/common/foot.jsp" direct="false"/>
+  </screen>
+
+</screen-definitions>

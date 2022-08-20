@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="GBK"?>
+
+<!DOCTYPE web-app PUBLIC '-//Sun Microsystems, Inc.//DTD Web Application 2.2//EN' 'http://java.sun.com/j2ee/dtds/web-app_2.2.dtd'>
+
+<web-app>
+  <display-name>web-tier</display-name>
+  <description>no description</description>
+  <servlet>
+    <servlet-name>Download</servlet-name>
+    <display-name>Download</display-name>
+    <description>no description</description>
+    <servlet-class>com.dc.eschool.controller.web.DownloadServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>web-tier</servlet-name>
+    <display-name>web-tier</display-name>
+    <description>no description</description>
+    <servlet-class>com.dc.eschool.controller.web.MainServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Download</servlet-name>
+    <url-pattern>download/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>web-tier</servlet-name>
+    <url-pattern>/main/*</url-pattern>
+  </servlet-mapping>
+  <session-config>
+    <session-timeout>30</session-timeout>
+  </session-config>
+  <resource-ref>
+    <description>no description</description>
+    <res-ref-name>jdbc/Eschool</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+  </resource-ref>
+  <ejb-ref>
+    <description>no description</description>
+    <ejb-ref-name>ejb/Controller</ejb-ref-name>
+    <ejb-ref-type>Session</ejb-ref-type>
+    <home>com.dc.eschool.controller.ejb.EJBControllerSFHome</home>
+    <remote>com.dc.eschool.controller.ejb.EJBControllerSF</remote>
+  </ejb-ref>
+  <ejb-ref>
+    <description>no description</description>
+    <ejb-ref-name>ejb/UsersManager</ejb-ref-name>
+    <ejb-ref-type>Session</ejb-ref-type>
+    <home>com.dc.eschool.users.mgrbean.UsersSLHome</home>
+    <remote>com.dc.eschool.users.mgrbean.UsersSL</remote>
+  </ejb-ref>
+  <ejb-ref>
+    <description>no description</description>
+    <ejb-ref-name>ejb/SubjectManager</ejb-ref-name>
+    <ejb-ref-type>Session</ejb-ref-type>
+    <home>com.dc.eschool.subject.mgrbean.SubjectSLHome</home>
+    <remote>com.dc.eschool.subject.mgrbean.SubjectSL</remote>
+  </ejb-ref>
+  <ejb-ref>
+    <description>no description</description>
+    <ejb-ref-name>ejb/EClassManager</ejb-ref-name>
+    <ejb-ref-type>Session</ejb-ref-type>
+    <home>com.dc.eschool.eclass.mgrbean.EClassSLHome</home>
+    <remote>com.dc.eschool.eclass.mgrbean.EClassSL</remote>
+  </ejb-ref>
+  <ejb-ref>
+    <description>no description</description>
+    <ejb-ref-name>ejb/CourseManager</ejb-ref-name>
+    <ejb-ref-type>Session</ejb-ref-type>
+    <home>com.dc.eschool.course.mgrbean.CourseSLHome</home>
+    <remote>com.dc.eschool.course.mgrbean.CourseSL</remote>
+  </ejb-ref>
+  <ejb-ref>
+    <description>no description</description>
+    <ejb-ref-name>ejb/CourseStudentManager</ejb-ref-name>
+    <ejb-ref-type>Session</ejb-ref-type>
+    <home>com.dc.eschool.coursestudent.mgrbean.CourseStudentSLHome</home>
+    <remote>com.dc.eschool.coursestudent.mgrbean.CourseStudentSL</remote>
+  </ejb-ref>
+  <ejb-ref>
+    <description>no description</description>
+    <ejb-ref-name>ejb/AnswerItemManager</ejb-ref-name>
+    <ejb-ref-type>Session</ejb-ref-type>
+    <home>com.dc.eschool.answeritem.mgrbean.AnswerItemSLHome</home>
+    <remote>com.dc.eschool.answeritem.mgrbean.AnswerItemSL</remote>
+  </ejb-ref>
+  <ejb-ref>
+    <description>no description</description>
+    <ejb-ref-name>ejb/ProjectManager</ejb-ref-name>
+    <ejb-ref-type>Session</ejb-ref-type>
+    <home>com.dc.eschool.project.mgrbean.ProjectMgrSLHome</home>
+    <remote>com.dc.eschool.project.mgrbean.ProjectMgrSL</remote>
+  </ejb-ref>
+  <ejb-ref>
+    <description>no description</description>
+    <ejb-ref-name>ejb/ContentManager</ejb-ref-name>
+    <ejb-ref-type>Session</ejb-ref-type>
+    <home>com.dc.eschool.content.mgrbean.ContentMgrSLHome</home>
+    <remote>com.dc.eschool.content.mgrbean.ContentMgrSL</remote>
+  </ejb-ref>
+  <ejb-ref>
+    <description>no description</description>
+    <ejb-ref-name>ejb/HomeWorkManager</ejb-ref-name>
+    <ejb-ref-type>Session</ejb-ref-type>
+    <home>com.dc.eschool.homework.mgrbean.HomeWorkSLHome</home>
+    <remote>com.dc.eschool.homework.mgrbean.HomeWorkSL</remote>
+  </ejb-ref>
+  <ejb-ref>
+    <description>no description</description>
+    <ejb-ref-name>ejb/HomeWorkContentManager</ejb-ref-name>
+    <ejb-ref-type>Session</ejb-ref-type>
+    <home>com.dc.eschool.homeworkcontent.mgrbean.HWContentSLHome</home>
+    <remote>com.dc.eschool.homeworkcontent.mgrbean.HWContentSL</remote>
+  </ejb-ref>
+  <ejb-ref>
+    <description>no description</description>
+    <ejb-ref-name>ejb/SessionManager</ejb-ref-name>
+    <ejb-ref-type>Session</ejb-ref-type>
+    <home>com.dc.eschool.sessiondata.SessionSLHome</home>
+    <remote>com.dc.eschool.sessiondata.SessionSL</remote>
+  </ejb-ref>
+  <ejb-ref>
+    <description>no description</description>
+    <ejb-ref-name>ejb/StudentExamContentManager</ejb-ref-name>
+    <ejb-ref-type>Session</ejb-ref-type>
+    <home>com.dc.eschool.studentexamcontent.mgebean.StudentExamContentSLHome</home>
+    <remote>com.dc.eschool.studentexamcontent.mgebean.StudentExamContentSL</remote>
+  </ejb-ref>
+  <ejb-ref>
+    <description>no description</description>
+    <ejb-ref-name>ejb/SchoolResourceManager</ejb-ref-name>
+    <ejb-ref-type>Session</ejb-ref-type>
+    <home>com.dc.eschool.schoolresource.mgrbean.SchoolResourceSLHome</home>
+    <remote>com.dc.eschool.schoolresource.mgrbean.SchoolResourceSL</remote>
+  </ejb-ref>
+  <ejb-ref>
+    <description>no description</description>
+    <ejb-ref-name>ejb/TestResultsItemManager</ejb-ref-name>
+    <ejb-ref-type>Session</ejb-ref-type>
+    <home>com.dc.eschool.testresultsitem.mgrbean.TestResultsItemSLHome</home>
+    <remote>com.dc.eschool.testresultsitem.mgrbean.TestResultsItemSL</remote>
+  </ejb-ref>
+  <ejb-ref>
+    <description>no description</description>
+    <ejb-ref-name>ejb/ScoreStatisticManager</ejb-ref-name>
+    <ejb-ref-type>Session</ejb-ref-type>
+    <home>com.dc.eschool.scorestatistic.mgrbean.ScoreStatisticSLHome</home>
+    <remote>com.dc.eschool.scorestatistic.mgrbean.ScoreStatisticSL</remote>
+  </ejb-ref>
+  <ejb-ref>
+    <description>no description</description>
+    <ejb-ref-name>ejb/ExaminationScoreManager</ejb-ref-name>
+    <ejb-ref-type>Session</ejb-ref-type>
+    <home>com.dc.eschool.examinationscore.mgrbean.ExaminationScoreSLHome</home>
+    <remote>com.dc.eschool.examinationscore.mgrbean.ExaminationScoreSL</remote>
+  </ejb-ref>
+  <ejb-ref>
+    <description>no description</description>
+    <ejb-ref-name>ejb/RMIInterfaceManager</ejb-ref-name>
+    <ejb-ref-type>Session</ejb-ref-type>
+    <home>com.dc.eschool.rmi.ejb.RMIInterfaceSLHome</home>
+    <remote>com.dc.eschool.rmi.ejb.RMIInterfaceSL</remote>
+  </ejb-ref>
+</web-app>
+

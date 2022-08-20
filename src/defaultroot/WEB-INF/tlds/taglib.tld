@@ -1,0 +1,1332 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE taglib
+        PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN"
+	"http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+
+
+
+<taglib>
+  <tlibversion>1.0</tlibversion>
+  <jspversion>1.1</jspversion>
+  <shortname>eschool</shortname>
+  <info>
+	eschool web framework.
+  </info>
+
+  <tag>
+    <name>insert</name>
+    <tagclass>com.dc.eschool.controller.taglib.InsertTag</tagclass>
+
+    <bodycontent>JSP</bodycontent>
+    <info>
+	An insertion tag
+    </info>
+
+    <attribute>
+      <name>id</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>parameter</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+
+  <tag>
+    <name>items</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.ItemsTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <info>
+      The inner tag in a list tag in which the items actually appear.  The
+      body of this tag is processed once for each item actually in the list.
+      This tag merely keeps a copy of the current item for the inner tags to
+      refer to.  Must appear in a list tag.
+    </info>
+  </tag>
+
+  <tag>
+    <name>eschoolAttribute</name>
+    <tagclass>com.dc.eschool.controller.taglib.EschoolPublicTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <info>
+      Depending on the value of the attribute specified,
+      a different string is printed.
+    </info>
+
+    <!-- default is "name" -->
+    <attribute>
+      <name>attribute</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>projectAttribute</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.ProjectAttributeTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <info>
+      A tag to print out attributes of a Project object.  It should appear
+      in an items tag.  Depending on the value of the attribute specified,
+      a different string is printed.
+    </info>
+
+    <!-- default is "name" -->
+    <attribute>
+      <name>attribute</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>contentAttribute</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.ContentAttributeTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <info>
+      fucking the info of hell.
+    </info>
+
+    <!-- default is "name" -->
+    <attribute>
+      <name>attribute</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>firstForm</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.FirstFormTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <info>
+    first page form generation.
+    </info>
+
+    <!-- no default -->
+    <attribute>
+      <name>action</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>lastForm</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.LastFormTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <info>
+    last page form generation.
+    </info>
+
+    <!-- no default -->
+    <attribute>
+      <name>action</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>pageForm</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.PageFormTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <info>
+      page form generation.
+    </info>
+  </tag>
+
+  <tag>
+    <name>nextForm</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.NextFormTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <info>
+    next page form generation.
+    </info>
+
+    <!-- no default -->
+    <attribute>
+      <name>action</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>prevForm</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.PrevFormTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <info>
+      prev page form generation same as next one.
+    </info>
+
+    <!-- no default -->
+    <attribute>
+      <name>action</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <!-- list tags -->
+  <tag>
+    <name>projectSearchList</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.ProjectSearchListTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <info>
+      A tag that for displaying search results
+    </info>
+
+    <!-- no default -->
+    <attribute>
+      <name>numItems</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <!-- default is 1 -->
+    <attribute>
+      <name>startIndex</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <!-- what to display if list is empty -->
+    <attribute>
+      <name>emptyString</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>clause</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>value</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>course</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>contentSearchList</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.ContentSearchListTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <info>
+      A tag that for displaying search results
+    </info>
+
+    <!-- no default -->
+    <attribute>
+      <name>numItems</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <!-- default is 1 -->
+    <attribute>
+      <name>startIndex</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <!-- what to display if list is empty -->
+    <attribute>
+      <name>emptyString</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>clause</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>method</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>value</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+<!-- User Attribute Tag -->
+  <tag>
+    <name>usersAttribute</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.UsersAttributeTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <info>
+      A tag to print out attributes of a User object.  It should appear
+      in an items tag.  Depending on the value of the attribute specified,
+      a different string is printed.
+    </info>
+
+    <!-- default is "name" -->
+    <attribute>
+      <name>attribute</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+<!-- User Search result List Tag -->
+  <tag>
+    <name>usersSearchList</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.UsersSearchListTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <info>
+      A tag that for displaying search results
+    </info>
+
+    <!-- no default -->
+    <attribute>
+      <name>numItems</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <!-- default is 1 -->
+    <attribute>
+      <name>startIndex</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <!-- what to display if list is empty -->
+    <attribute>
+      <name>emptyString</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>clause</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>value</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+  </tag>
+
+  <tag>
+    <name>userDetails</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.UserDetailsTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <info>
+    </info>
+  </tag>
+
+  <tag>
+    <name>userDetailsAttr</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.UserDetailsAttributeTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <info>
+    </info>
+
+    <!-- default is "name" -->
+    <attribute>
+      <name>attribute</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+
+  <!-- Eclass Attribute Tag -->
+  <tag>
+    <name>eclassAttribute</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.EClassAttributeTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <info>
+      A tag to print out attributes of a User object.  It should appear
+      in an items tag.  Depending on the value of the attribute specified,
+      a different string is printed.
+    </info>
+
+    <!-- default is "name" -->
+    <attribute>
+      <name>attribute</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+<!-- Eclass Search result List Tag -->
+  <tag>
+    <name>eclassSearchList</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.EClassSearchListTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <info>
+      A tag that for displaying search results
+    </info>
+
+    <!-- no default -->
+    <attribute>
+      <name>numItems</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <!-- default is 1 -->
+    <attribute>
+      <name>startIndex</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <!-- what to display if list is empty -->
+    <attribute>
+      <name>emptyString</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>clause</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>eclassDetails</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.EClassDetailsTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <info>
+    </info>
+  </tag>
+
+  <tag>
+    <name>eclassDetailsAttr</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.EClassDetailsAttributeTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <info>
+    </info>
+
+    <!-- default is "name" -->
+    <attribute>
+      <name>attribute</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+<!-- Subject Attribute Tag -->
+  <tag>
+    <name>subjectAttribute</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.SubjectAttributeTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <info>
+      A tag to print out attributes of a User object.  It should appear
+      in an items tag.  Depending on the value of the attribute specified,
+      a different string is printed.
+    </info>
+
+    <!-- default is "name" -->
+    <attribute>
+      <name>attribute</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+<!-- subject Search result List Tag -->
+  <tag>
+    <name>subjectSearchList</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.SubjectSearchListTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <info>
+      A tag that for displaying search results
+    </info>
+
+    <!-- no default -->
+    <attribute>
+      <name>numItems</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <!-- default is 1 -->
+    <attribute>
+      <name>startIndex</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <!-- what to display if list is empty -->
+    <attribute>
+      <name>emptyString</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>clause</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>subjectDetails</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.SubjectDetailsTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <info>
+    </info>
+  </tag>
+
+  <tag>
+    <name>subjectDetailsAttr</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.SubjectDetailsAttributeTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <info>
+    </info>
+
+    <!-- default is "name" -->
+    <attribute>
+      <name>attribute</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+
+<!-- Subject Attribute Tag -->
+  <tag>
+    <name>courseAttribute</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.CourseAttributeTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <info>
+      A tag to print out attributes of a User object.  It should appear
+      in an items tag.  Depending on the value of the attribute specified,
+      a different string is printed.
+    </info>
+
+    <!-- default is "name" -->
+    <attribute>
+      <name>attribute</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+<!-- subject Search result List Tag -->
+  <tag>
+    <name>courseSearchList</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.CourseSearchListTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <info>
+      A tag that for displaying search results
+    </info>
+
+    <!-- no default -->
+    <attribute>
+      <name>numItems</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <!-- default is 1 -->
+    <attribute>
+      <name>startIndex</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <!-- what to display if list is empty -->
+    <attribute>
+      <name>emptyString</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>clause</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>value</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>courseDetails</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.CourseDetailsTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <info>
+    </info>
+  </tag>
+
+  <tag>
+    <name>courseDetailsAttr</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.CourseDetailsAttributeTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <info>
+    </info>
+
+    <!-- default is "name" -->
+    <attribute>
+      <name>attribute</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <!-- Subject Attribute Tag -->
+  <tag>
+    <name>csAttribute</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.CSAttributeTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <info>
+      A tag to print out attributes of a User object.  It should appear
+      in an items tag.  Depending on the value of the attribute specified,
+      a different string is printed.
+    </info>
+
+    <!-- default is "name" -->
+    <attribute>
+      <name>attribute</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+<!-- subject Search result List Tag -->
+  <tag>
+    <name>csSearchList</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.CSSearchListTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <info>
+      A tag that for displaying search results
+    </info>
+
+    <!-- no default -->
+    <attribute>
+      <name>numItems</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <!-- default is 1 -->
+    <attribute>
+      <name>startIndex</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <!-- what to display if list is empty -->
+    <attribute>
+      <name>emptyString</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>clause</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>answerItemDetails</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.AnswerItemDetailsTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <info>
+    </info>
+  </tag>
+
+  <tag>
+    <name>answerItemDetailsAttr</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.AnswerItemDetailsAttributeTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <info>
+    </info>
+
+    <!-- default is "name" -->
+    <attribute>
+      <name>attribute</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>answerItemAttribute</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.AnswerItemAttributeTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <info>
+      A tag to print out attributes of a User object.  It should appear
+      in an items tag.  Depending on the value of the attribute specified,
+      a different string is printed.
+    </info>
+
+    <!-- default is "name" -->
+    <attribute>
+      <name>attribute</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+<!-- subject Search result List Tag -->
+  <tag>
+    <name>answerItemSearchList</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.AnswerItemSearchListTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <info>
+      A tag that for displaying search results
+    </info>
+
+    <!-- no default -->
+    <attribute>
+      <name>numItems</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <!-- default is 1 -->
+    <attribute>
+      <name>startIndex</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <!-- what to display if list is empty -->
+    <attribute>
+      <name>emptyString</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>clause</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+<!-- HomeWorkContent Attribute Tag -->
+  <tag>
+    <name>hwContentAttribute</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.HomeWorkContentAttributeTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <info>
+      A tag to print out attributes of a User object.  It should appear
+      in an items tag.  Depending on the value of the attribute specified,
+      a different string is printed.
+    </info>
+
+    <!-- default is "name" -->
+    <attribute>
+      <name>attribute</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+<!-- User Search result List Tag -->
+  <tag>
+    <name>hwContentSearchList</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.HomeWorkContentSearchListTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <info>
+      A tag that for displaying search results
+    </info>
+
+    <!-- no default -->
+    <attribute>
+      <name>numItems</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <!-- default is 1 -->
+    <attribute>
+      <name>startIndex</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <!-- what to display if list is empty -->
+    <attribute>
+      <name>emptyString</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>clause</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+  </tag>
+  <!-- SchoolResource Attribute Tag -->
+  <tag>
+    <name>schoolresourceAttribute</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.SchoolResourceAttributeTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <info>
+      A tag to print out attributes of a User object.  It should appear
+      in an items tag.  Depending on the value of the attribute specified,
+      a different string is printed.
+    </info>
+
+    <!-- default is "name" -->
+    <attribute>
+      <name>attribute</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+<!-- schoolresource Search result List Tag -->
+  <tag>
+    <name>schoolresourceSearchList</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.SchoolResourceSearchListTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <info>
+      A tag that for displaying search results
+    </info>
+
+    <!-- no default -->
+    <attribute>
+      <name>numItems</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <!-- default is 1 -->
+    <attribute>
+      <name>startIndex</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <!-- what to display if list is empty -->
+    <attribute>
+      <name>emptyString</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>keyword</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>subjectID</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>time</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>role</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+
+  </tag>
+
+  <tag>
+    <name>schoolresourceDetails</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.SchoolResourceDetailsTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <info>
+    </info>
+  </tag>
+
+  <tag>
+    <name>schoolresourceDetailsAttr</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.SchoolResourceDetailsAttributeTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <info>
+    </info>
+
+    <!-- default is "name" -->
+    <attribute>
+      <name>attribute</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>contentDetails</name>
+    <tagclass>com.dc.eschool.controller.taglib.ContentDetailsTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <info>
+    </info>
+    <attribute>
+    	<name>contentId</name>
+    	<required>false</required>
+    	<rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>contentDetailsAttr</name>
+    <tagclass>com.dc.eschool.controller.taglib.ContentDetailsAttributeTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <info>
+    </info>
+
+    <!-- default is "name" -->
+    <attribute>
+      <name>attribute</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>projectDetails</name>
+    <tagclass>com.dc.eschool.controller.taglib.ProjectDetailsTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <info>
+    </info>
+
+    <attribute>
+    	<name>projId</name>
+    	<required>false</required>
+    	<rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>projectDetailsAttr</name>
+    <tagclass>com.dc.eschool.controller.taglib.ProjectDetailsAttributeTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <info>
+    </info>
+
+
+    <attribute>
+      <name>attribute</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>projectDetailsItems</name>
+    <tagclass>com.dc.eschool.controller.taglib.ProjectDetailsItemsTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <info>
+      inner tag i test at the first time,will it cause error?.
+    </info>
+  </tag>
+
+  <tag>
+    <name>projectDetailsItemsAttribute</name>
+    <tagclass>com.dc.eschool.controller.taglib.ProjectDetailsItemAttributeTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <info>
+      just no info here.
+    </info>
+
+    <!-- default is "name" -->
+    <attribute>
+      <name>attribute</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+    <!-- ScoreStatistic Attribute Tag -->
+  <tag>
+    <name>scorestatisticAttribute</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.ScoreStatisticAttributeTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <info>
+      A tag to print out attributes of a User object.  It should appear
+      in an items tag.  Depending on the value of the attribute specified,
+      a different string is printed.
+    </info>
+
+    <!-- default is "name" -->
+    <attribute>
+      <name>attribute</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+<!-- scorestatistic Search result List Tag -->
+  <tag>
+    <name>scorestatisticSearchList</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.ScoreStatisticSearchListTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <info>
+      A tag that for displaying search results
+    </info>
+
+    <!-- no default -->
+    <attribute>
+      <name>numItems</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <!-- default is 1 -->
+    <attribute>
+      <name>startIndex</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <!-- what to display if list is empty -->
+    <attribute>
+      <name>emptyString</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>clause</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>value</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+
+  </tag>
+
+  <tag>
+    <name>scorestatisticDetails</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.scorestatisticDetailsTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <info>
+    </info>
+  </tag>
+
+  <tag>
+    <name>scorestatisticDetailsAttr</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.ScoreStatisticDetailsAttributeTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <info>
+    </info>
+
+    <!-- default is "name" -->
+    <attribute>
+      <name>attribute</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <!-- TestResultItem Attribute Tag -->
+  <tag>
+    <name>testresultitemAttribute</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.TestResultItemAttributeTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <info>
+      A tag to print out attributes of a User object.  It should appear
+      in an items tag.  Depending on the value of the attribute specified,
+      a different string is printed.
+    </info>
+
+    <!-- default is "name" -->
+    <attribute>
+      <name>attribute</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+<!-- schoolresource Search result List Tag -->
+  <tag>
+    <name>testresultitemSearchList</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.TestResultItemSearchListTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <info>
+      A tag that for displaying search results
+    </info>
+
+    <!-- no default -->
+    <attribute>
+      <name>numItems</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <!-- default is 1 -->
+    <attribute>
+      <name>startIndex</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <!-- what to display if list is empty -->
+    <attribute>
+      <name>emptyString</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>clause</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>value</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+
+  </tag>
+
+  <tag>
+    <name>testresultitemDetails</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.TestResultItemDetailsTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <info>
+    </info>
+  </tag>
+
+  <tag>
+    <name>testresultitemDetailsAttr</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.TestResultItemDetailsAttributeTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <info>
+    </info>
+
+    <!-- default is "name" -->
+    <attribute>
+      <name>attribute</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>pcAttribute</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.PCAttributeTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <info>
+      A tag to print out attributes of a Project object.  It should appear
+      in an items tag.  Depending on the value of the attribute specified,
+      a different string is printed.
+    </info>
+
+    <!-- default is "name" -->
+    <attribute>
+      <name>attribute</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>pcSearchList</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.PCSearchListTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <info>
+      A tag that for displaying search results
+    </info>
+
+    <!-- no default -->
+    <attribute>
+      <name>numItems</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <!-- default is 1 -->
+    <attribute>
+      <name>startIndex</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <!-- what to display if list is empty -->
+    <attribute>
+      <name>emptyString</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>clause</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>value</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>info</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>time</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+<!-- Subject Attribute Tag -->
+  <tag>
+    <name>courseStudentAttribute</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.CourseStudentAttributeTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <info>
+      A tag to print out attributes of a User object.  It should appear
+      in an items tag.  Depending on the value of the attribute specified,
+      a different string is printed.
+    </info>
+
+    <!-- default is "name" -->
+    <attribute>
+      <name>attribute</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+<!-- subject Search result List Tag -->
+  <tag>
+    <name>courseStudentSearchList</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.CourseStudentSearchListTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <info>
+      A tag that for displaying search results
+    </info>
+
+    <!-- no default -->
+    <attribute>
+      <name>numItems</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <!-- default is 1 -->
+    <attribute>
+      <name>startIndex</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <!-- what to display if list is empty -->
+    <attribute>
+      <name>emptyString</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>clause</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>value</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+<!-- Subject Attribute Tag -->
+  <tag>
+    <name>examinationScoreAttribute</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.ExaminationScoreAttributeTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <info>
+      A tag to print out attributes of a User object.  It should appear
+      in an items tag.  Depending on the value of the attribute specified,
+      a different string is printed.
+    </info>
+
+    <!-- default is "name" -->
+    <attribute>
+      <name>attribute</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+<!-- subject Search result List Tag -->
+  <tag>
+    <name>examinationScoreSearchList</name>
+    <tagclass>com.dc.eschool.controller.taglib.list.ExaminationScoreSearchListTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <info>
+      A tag that for displaying search results
+    </info>
+
+    <!-- no default -->
+    <attribute>
+      <name>numItems</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <!-- default is 1 -->
+    <attribute>
+      <name>startIndex</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <!-- what to display if list is empty -->
+    <attribute>
+      <name>emptyString</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+</taglib>
+

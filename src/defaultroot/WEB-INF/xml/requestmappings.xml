@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<request-mappings>
+    <screen-definition url="/WEB-INF/xml/screendefinitions.xml" language="en_US"/>
+
+    <default-screen>MAIN</default-screen>
+    <admin-home>ADMIN</admin-home>
+    <teacher-home>TEACHER</teacher-home>
+    <student-home>STUDENT</student-home>
+    <signin-screen>SIGN_IN</signin-screen>
+    <signin-error-screen>SIGN_IN_ERROR</signin-error-screen>
+
+    <url-mapping url="/main" screen="MAIN" />
+    <url-mapping url="/error" screen="ERROR"/>
+    <url-mapping url="/missingformdata" screen="MISSING_FORM_DATA"/>
+    <url-mapping url="/admin" screen="ADMIN" requiresSignin="true" popedom="100"/>
+    <url-mapping url="/teacher" screen="TEACHER" requiresSignin="true" popedom="110"/>
+    <url-mapping url="/student" screen="STUDENT" requiresSignin="true" popedom="101"/>
+    <url-mapping url="/chatroom" screen="CHATROOM" requiresSignin="true"/>
+
+    <url-mapping url="/signin" screen="SIGN_IN"/>
+    <url-mapping url="/verifysignin" screen="SIGN_IN" useRequestHandler="true" useFlowHandler="true">
+       <request-handler-class>com.dc.eschool.controller.handlers.SigninHandler</request-handler-class>
+       <flow-handler class="com.dc.eschool.controller.handlers.SigninFlowHandler">
+         <handler-result result="1" screen="ADMIN"/>
+         <handler-result result="2" screen="TEACHER"/>
+         <handler-result result="3" screen="STUDENT"/>
+         <handler-result result="4" screen="SIGN_IN_ERROR"/>
+      </flow-handler>
+    </url-mapping>
+
+    <url-mapping url="/signout" screen="SIGN_OUT" useRequestHandler="true" popedom="100">
+      <request-handler-class>com.dc.eschool.controller.handlers.SignoutHandler</request-handler-class>
+    </url-mapping>
+
+    <url-mapping url="/users" screen="USERS" requiresSignin="true" popedom="100"/>
+    <url-mapping url="/usermanager" screen="USER_MANAGER" requiresSignin="true" popedom="100"/>
+    <url-mapping url="/validatenewuser" screen="USERS" useRequestHandler="true" useFlowHandler="true" requiresSignin="true" popedom="100">
+       <request-handler-class>com.dc.eschool.controller.handlers.UsersHandler</request-handler-class>
+       <flow-handler class="com.dc.eschool.controller.handlers.UsersFlowHandler">
+         <handler-result result="1" screen="USERS"/>
+         <handler-result result="2" screen="MISSING_FORM_DATA"/>
+      </flow-handler>
+    </url-mapping>
+
+    <url-mapping url="/admininfo" screen="ADMININFO" requiresSignin="true" popedom="100"/>
+    <url-mapping url="/validateadmin" screen="ADMININFO" useRequestHandler="true" useFlowHandler="true" requiresSignin="true" popedom="100">
+       <request-handler-class>com.dc.eschool.controller.handlers.UsersHandler</request-handler-class>
+       <flow-handler class="com.dc.eschool.controller.handlers.UsersFlowHandler">
+         <handler-result result="1" screen="ADMININFO"/>
+         <handler-result result="2" screen="MISSING_FORM_DATA"/>
+      </flow-handler>
+    </url-mapping>
+
+    <url-mapping url="/teacherinfo" screen="TEACHERINFO" requiresSignin="true" popedom="010"/>
+    <url-mapping url="/validateteacher" screen="TEACHERINFO" useRequestHandler="true" useFlowHandler="true" requiresSignin="true" popedom="010">
+       <request-handler-class>com.dc.eschool.controller.handlers.UsersHandler</request-handler-class>
+       <flow-handler class="com.dc.eschool.controller.handlers.UsersFlowHandler">
+         <handler-result result="1" screen="TEACHERINFO"/>
+         <handler-result result="2" screen="MISSING_FORM_DATA"/>
+      </flow-handler>
+    </url-mapping>
+
+    <url-mapping url="/studentinfo" screen="STUDENTINFO" requiresSignin="true" popedom="001"/>
+    <url-mapping url="/validatestudent" screen="STUDENTINFO" useRequestHandler="true" useFlowHandler="true" requiresSignin="true" popedom="001">
+       <request-handler-class>com.dc.eschool.controller.handlers.UsersHandler</request-handler-class>
+       <flow-handler class="com.dc.eschool.controller.handlers.UsersFlowHandler">
+         <handler-result result="1" screen="STUDENTINFO"/>
+         <handler-result result="2" screen="MISSING_FORM_DATA"/>
+      </flow-handler>
+    </url-mapping>
+
+    <url-mapping url="/eclass" screen="ECLASS" requiresSignin="true" popedom="100"/>
+    <url-mapping url="/eclassmanager" screen="ECLASS_MANAGER" requiresSignin="true" popedom="100"/>
+    <url-mapping url="/validateneweclass" screen="ECLASS" useRequestHandler="true" useFlowHandler="true" requiresSignin="true" popedom="100">
+       <request-handler-class>com.dc.eschool.controller.handlers.EClassHandler</request-handler-class>
+       <flow-handler class="com.dc.eschool.controller.handlers.EClassFlowHandler">
+         <handler-result result="1" screen="ECLASS"/>
+         <handler-result result="2" screen="MISSING_FORM_DATA"/>
+      </flow-handler>
+    </url-mapping>
+
+    <url-mapping url="/subject" screen="SUBJECT" requiresSignin="true" popedom="100"/>
+    <url-mapping url="/subjectmanager" screen="SUBJECT_MANAGER" requiresSignin="true" popedom="100"/>
+    <url-mapping url="/validatenewsubject" screen="SUBJECT" useRequestHandler="true" useFlowHandler="true" requiresSignin="true" popedom="100">
+       <request-handler-class>com.dc.eschool.controller.handlers.SubjectHandler</request-handler-class>
+       <flow-handler class="com.dc.eschool.controller.handlers.SubjectFlowHandler">
+         <handler-result result="1" screen="SUBJECT"/>
+         <handler-result result="2" screen="MISSING_FORM_DATA"/>
+      </flow-handler>
+    </url-mapping>
+
+    <url-mapping url="/scourseinfo" screen="S_COURSE_INFO" requiresSignin="true" popedom="101"/>
+    <url-mapping url="/tcourseinfo" screen="T_COURSE_INFO" requiresSignin="true" popedom="110"/>
+
+    <url-mapping url="/course" screen="COURSE" requiresSignin="true" popedom="100"/>
+    <url-mapping url="/coursemanager" screen="COURSE_MANAGER" requiresSignin="true" popedom="100"/>
+    <url-mapping url="/validatenewcourse" screen="COURSE" useRequestHandler="true" useFlowHandler="true" requiresSignin="true" popedom="100">
+       <request-handler-class>com.dc.eschool.controller.handlers.CourseHandler</request-handler-class>
+       <flow-handler class="com.dc.eschool.controller.handlers.CourseFlowHandler">
+         <handler-result result="1" screen="COURSE"/>
+         <handler-result result="2" screen="MISSING_FORM_DATA"/>
+      </flow-handler>
+    </url-mapping>
+
+    <url-mapping url="/coursestudent" screen="COURSE_STUDENT" requiresSignin="true" popedom="100"/>
+    <url-mapping url="/selectstudent" screen="COURSE_STUDENT" useRequestHandler="true" useFlowHandler="true" requiresSignin="true" popedom="100">
+       <request-handler-class>com.dc.eschool.controller.handlers.CourseStudentHandler</request-handler-class>
+       <flow-handler class="com.dc.eschool.controller.handlers.CourseStudentFlowHandler">
+         <handler-result result="1" screen="COURSE_STUDENT"/>
+         <handler-result result="2" screen="MISSING_FORM_DATA"/>
+      </flow-handler>
+    </url-mapping>
+
+    <url-mapping url="/testmanager" screen="TEST_MANAGER" requiresSignin="true" popedom="110"/>
+    <url-mapping url="/othermanager" screen="OTHER_MANAGER" requiresSignin="true" popedom="110"/>
+    <url-mapping url="/validateproject" screen="TEST_MANAGER" useRequestHandler="true" useFlowHandler="true" requiresSignin="true" popedom="110">
+       <request-handler-class>com.dc.eschool.controller.handlers.ProjectHandler</request-handler-class>
+       <flow-handler class="com.dc.eschool.controller.handlers.ProjectFlowHandler">
+         <handler-result result="1" screen="PROJECT_REDIRECT"/>
+         <handler-result result="2" screen="MISSING_FORM_DATA"/>
+      </flow-handler>
+    </url-mapping>
+
+    <url-mapping url="/projectlist" screen="PROJECT_LIST" requiresSignin="true"/>
+
+    <url-mapping url="/contentmanager" screen="CONTENT_MANAGER" requiresSignin="true" popedom="110"/>
+    <url-mapping url="/validatecontent" screen="CONTENT_MANAGER" useRequestHandler="true" useFlowHandler="true" requiresSignin="true" popedom="110">
+       <request-handler-class>com.dc.eschool.controller.handlers.ContentHandler</request-handler-class>
+       <flow-handler class="com.dc.eschool.controller.handlers.ContentFlowHandler">
+         <handler-result result="1" screen="CONTENT_MANAGER"/>
+         <handler-result result="2" screen="MISSING_FORM_DATA"/>
+      </flow-handler>
+    </url-mapping>
+
+    <url-mapping url="/otherupload" screen="OTHER_UPLOAD" requiresSignin="true" popedom="110"/>
+    <url-mapping url="/validateother" screen="OTHER_UPLOAD" useRequestHandler="true" useFlowHandler="true" requiresSignin="true" popedom="110">
+       <request-handler-class>com.dc.eschool.controller.handlers.ContentHandler</request-handler-class>
+       <flow-handler class="com.dc.eschool.controller.handlers.ContentFlowHandler">
+         <handler-result result="1" screen="OTHER_UPLOAD"/>
+         <handler-result result="2" screen="MISSING_FORM_DATA"/>
+      </flow-handler>
+    </url-mapping>
+
+    <url-mapping url="/testlist" screen="TEST_LIST" requiresSignin="true" popedom="110"/>
+    <url-mapping url="/analysetest" screen="TEST_ANALYSE" requiresSignin="true" popedom="110"/>
+    <url-mapping url="/printanalysetest" screen="TEST_ANALYSE_PRINT" requiresSignin="true" popedom="110"/>
+    <url-mapping url="/deletetestcontent" screen="TEST_LIST" useRequestHandler="true" useFlowHandler="true" requiresSignin="true" popedom="110">
+       <request-handler-class>com.dc.eschool.controller.handlers.ContentHandler</request-handler-class>
+       <flow-handler class="com.dc.eschool.controller.handlers.ContentFlowHandler">
+         <handler-result result="1" screen="TEST_LIST"/>
+         <handler-result result="2" screen="MISSING_FORM_DATA"/>
+      </flow-handler>
+    </url-mapping>
+
+    <url-mapping url="/studentprojectlist" screen="PROJECT_LIST_STUDENT" requiresSignin="true"/>
+
+    <url-mapping url="/selectproject" screen="SELECT_PROJECT" requiresSignin="true" popedom="110"/>
+    <url-mapping url="/validatepc" screen="SELECT_PROJECT" useRequestHandler="true" useFlowHandler="true" requiresSignin="true" popedom="110">
+       <request-handler-class>com.dc.eschool.controller.handlers.ContentHandler</request-handler-class>
+       <flow-handler class="com.dc.eschool.controller.handlers.ContentFlowHandler">
+         <handler-result result="1" screen="SELECT_PROJECT"/>
+         <handler-result result="2" screen="MISSING_FORM_DATA"/>
+      </flow-handler>
+    </url-mapping>
+
+    <url-mapping url="/selectother" screen="SELECT_OTHER" requiresSignin="true" popedom="110"/>
+    <url-mapping url="/validatepcother" screen="SELECT_OTHER" useRequestHandler="true" useFlowHandler="true" requiresSignin="true" popedom="110">
+       <request-handler-class>com.dc.eschool.controller.handlers.ContentHandler</request-handler-class>
+       <flow-handler class="com.dc.eschool.controller.handlers.ContentFlowHandler">
+         <handler-result result="1" screen="SELECT_OTHER"/>
+         <handler-result result="2" screen="MISSING_FORM_DATA"/>
+      </flow-handler>
+    </url-mapping>
+
+    <url-mapping url="/otherlist" screen="OTHER_LIST" requiresSignin="true" popedom="110"/>
+    <url-mapping url="/deleteothercontent" screen="OTHER_LIST" useRequestHandler="true" useFlowHandler="true" requiresSignin="true" popedom="110" >
+       <request-handler-class>com.dc.eschool.controller.handlers.ContentHandler</request-handler-class>
+       <flow-handler class="com.dc.eschool.controller.handlers.ContentFlowHandler">
+         <handler-result result="1" screen="OTHER_LIST"/>
+         <handler-result result="2" screen="MISSING_FORM_DATA"/>
+      </flow-handler>
+    </url-mapping>
+
+    <url-mapping url="/studenttest" screen="TEST_STUDENT" requiresSignin="true"/>
+    <url-mapping url="/studentother" screen="OTHER_STUDENT" requiresSignin="true"/>
+    <url-mapping url="/studentotherlist" screen="OTHER_LIST_STUDENT" requiresSignin="true"/>
+
+    <url-mapping url="/studenthomework" screen="HOMEWORK_DETAIL" requiresSignin="true"/>
+    <url-mapping url="/studenthomeworklist" screen="HOMEWORK_LIST_STUDENT" requiresSignin="true"/>
+
+    <url-mapping url="/answeritem" screen="ANSWERITEM" requiresSignin="true" popedom="110"/>
+    <url-mapping url="/validateansweritem" screen="ANSWERITEM" useRequestHandler="true" useFlowHandler="true" requiresSignin="true" popedom="110">
+       <request-handler-class>com.dc.eschool.controller.handlers.AnswerItemHandler</request-handler-class>
+       <flow-handler class="com.dc.eschool.controller.handlers.AnswerItemFlowHandler">
+         <handler-result result="1" screen="ANSWERITEM"/>
+         <handler-result result="2" screen="MISSING_FORM_DATA"/>
+      </flow-handler>
+    </url-mapping>
+
+    <url-mapping url="/studenthomeworkupload" screen="HOMEWORK_UPLOAD_STUDENT" requiresSignin="true"/>
+    <url-mapping url="/approvedupload" screen="APPROVED_UPLOAD" requiresSignin="true" popedom="110"/>
+    <url-mapping url="/validatehomework" screen="HOMEWORK_UPLOAD_STUDENT" useRequestHandler="true" useFlowHandler="true" requiresSignin="true">
+       <request-handler-class>com.dc.eschool.controller.handlers.HomeWorkHandler</request-handler-class>
+       <flow-handler class="com.dc.eschool.controller.handlers.HomeWorkFlowHandler">
+         <handler-result result="1" screen="HOMEWORK_UPLOAD_STUDENT"/>
+         <handler-result result="2" screen="MISSING_FORM_DATA"/>
+         <handler-result result="3" screen="APPROVED_UPLOAD"/>
+         <handler-result result="4" screen="HOMEWORK_UPLOAD_STUDENT"/>
+      </flow-handler>
+    </url-mapping>
+
+    <url-mapping url="/approvehomework" screen="APPROVE_HOMEWORK" requiresSignin="true" popedom="110"/>
+    <url-mapping url="/notdeliver" screen="UNHANDIN_STUDENT" requiresSignin="true" popedom="110"/>
+    <url-mapping url="/uploadedhomework" screen="UPLOADED_HOMEWORK" requiresSignin="true"/>
+
+    <url-mapping url="/adminteacherresource" screen="A_TEACHER_RESOURCE" requiresSignin="true" popedom="100"/>
+    <url-mapping url="/teacherteacherresource" screen="T_TEACHER_RESOURCE" requiresSignin="true" popedom="110"/>
+    <url-mapping url="/studentteacherresource" screen="S_TEACHER_RESOURCE" requiresSignin="true" popedom="101"/>
+
+    <url-mapping url="/schoolresourcemanager" screen="SCHOOLRESOURCEMANAGER" popedom="100"/>
+    <url-mapping url="/judgepaper" screen="JUDGEPAPER" popedom="110"/>
+    <url-mapping url="/validatenewtestresultitem" screen="TESTRESULTITEM" useRequestHandler="true" useFlowHandler="true" requiresSignin="true" popedom="110">
+       <request-handler-class>com.dc.eschool.controller.handlers.TestResultItemHandler</request-handler-class>
+       <flow-handler class="com.dc.eschool.controller.handlers.TestResultItemFlowHandler">
+         <handler-result result="1" screen="TESTRESULTITEM"/>
+         <handler-result result="2" screen="MISSING_FORM_DATA"/>
+      </flow-handler>
+    </url-mapping>
+
+    <url-mapping url="/updateschoolresource" screen="SCHOOLRESOURCE_UPDATED" useRequestHandler="true" useFlowHandler="true" popedom="100">
+      <request-handler-class>com.dc.eschool.controller.handlers.SchoolResourceHandler</request-handler-class>
+      <flow-handler class="com.dc.eschool.controller.handlers.SchoolResourceFlowHandler">
+         <handler-result result="1" screen="SCHOOLRESOURCE_UPDATED"/>
+         <handler-result result="2" screen="MISSING_FORM_DATA"/>
+      </flow-handler>
+    </url-mapping>
+
+    <url-mapping url="/studentlookupgrade" screen="LOOKUPGRADE_STUDENT" requiresSignin="true"/>
+    <url-mapping url="/teacherlookupgrade" screen="LOOKUPGRADE_TEACHER" requiresSignin="true"/>
+    <url-mapping url="/adminschoolresourcelookup" screen="LOOKUPSCHOOLRESOURCE_ADMIN" requiresSignin="true" popedom="100"/>
+    <url-mapping url="/teacherschoolresourcelookup" screen="LOOKUPSCHOOLRESOURCE_TEACHER" requiresSignin="true" popedom="110"/>
+    <url-mapping url="/studentschoolresourcelookup" screen="LOOKUPSCHOOLRESOURCE_STUDENT" requiresSignin="true" popedom="101"/>
+    <url-mapping url="/teacherresourcelookup" screen="LOOKUPTEACHERRESOURCE" requiresSignin="true"/>
+    <url-mapping url="/schooldatalist" screen="SCHOOLDATALIST" requiresSignin="true"/>
+
+    <exception-mapping exception-class="com.dc.eschool.controller.exception.ControllerException" screen="SIGN_IN_ERROR"/>
+    <exception-mapping exception-class="com.dc.eschool.controller.exception.ControllerException" screen="ERROR"/>
+
+</request-mappings >
+
+
+
+
